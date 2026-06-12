@@ -1,5 +1,6 @@
 <script>
 	import { handleLeadSubmit } from '$lib/scripts/lead-form.js';
+	import ProgramHero from '$lib/components/ProgramHero.svelte';
 </script>
 
 <svelte:head>
@@ -11,16 +12,7 @@
 </svelte:head>
 
 <main>
-	<section class="flex program-hero">
-		<div class="program-hero-image" aria-hidden="true"></div>
-
-		<div class="program-hero-content">
-			<p class="program-code">MCST</p>
-			<h1 class="gold">Master<br />of Science</h1>
-			<h3>in Computer Science and Technology</h3>
-		</div>
-	</section>
-
+	<ProgramHero></ProgramHero>
 	<section class="flex column program-intro">
 		<h2>5-Year (4+1) BS to MS MCST</h2>
 		<p>
