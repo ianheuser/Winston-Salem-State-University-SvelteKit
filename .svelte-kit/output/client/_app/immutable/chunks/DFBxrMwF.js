@@ -1,0 +1,1 @@
+function e(e){e.preventDefault();let t=e.currentTarget,n=t.querySelector(`.form-status`),r=t.dataset.successMessage||`Thanks. We will be in touch soon.`;n&&(n.textContent=r),t.reset()}export{e as t};

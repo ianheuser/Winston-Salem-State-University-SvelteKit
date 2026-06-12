@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"/Users/home/Documents/Claude/Projects/Svelte - WSSU\"; ls \"/Users/home/Documents/Claude/Projects\" 2>/dev/null)",
+      "Bash(npm --version)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//Users/home/.nvm/versions/**)",
+      "Read(//Users/home/.volta/**)",
+      "Read(//Applications/**)",
+      "Bash(curl -s https://nodejs.org/dist/index.json)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(next\\(v['version'] for v in d if v['lts']\\)\\)\")",
+      "Bash(npx -y sv create --template minimal --types jsdoc --no-add-ons --install npm scaffold-tmp)",
+      "Bash(mv scaffold-tmp/* scaffold-tmp/.gitignore scaffold-tmp/.npmrc .)",
+      "Bash(rmdir scaffold-tmp *)",
+      "Bash(cd \"/Users/home/Documents/Claude/Projects/Svelte - WSSU\" && mv scaffold-tmp/.svelte-kit scaffold-tmp/.vscode . && rmdir scaffold-tmp && ls -la)",
+      "Bash(cp -R __TRACKED_VAR__/images static/images)",
+      "Bash(cp __TRACKED_VAR__/styles.css static/styles.css)",
+      "Bash(rm -f static/images/.DS_Store)",
+      "Bash(npm run *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(ps -p 25149 -o pid,command)",
+      "Bash(lsof -nP -iTCP:5173 -sTCP:LISTEN)"
+    ]
+  }
+}

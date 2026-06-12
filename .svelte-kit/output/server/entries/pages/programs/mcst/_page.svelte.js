@@ -1,0 +1,30 @@
+import { n as head } from "../../../../chunks/server.js";
+//#region src/routes/programs/mcst/+page.svelte
+function _page($$renderer) {
+	head("1q2o7pm", $$renderer, ($$renderer) => {
+		$$renderer.title(($$renderer) => {
+			$$renderer.push(`<title>Master of Science in Computer Science and Technology | WSSU</title>`);
+		});
+		$$renderer.push(`<meta name="description" content="Explore the Master of Science in Computer Science and Technology program at Winston-Salem State University."/>`);
+	});
+	$$renderer.push(`<main><section class="flex program-hero"><div class="program-hero-image" aria-hidden="true"></div> <div class="program-hero-content"><p class="program-code">MCST</p> <h1 class="gold">Master<br/>of Science</h1> <h3>in Computer Science and Technology</h3></div></section> <section class="flex column program-intro"><h2>5-Year (4+1) BS to MS MCST</h2> <p>The 4+1 program lets qualified WSSU Computer Science majors complete both degrees in five years - saving time
+			and tuition.</p></section> <section class="flex inquiry-section" id="contact"><div class="campus-collage" aria-hidden="true"><img class="left" src="/images/landing-campus-left.jpg" alt=""/></div> <div class="photo-card red"><div class="red-line"></div> <img src="/images/MCST_lead_form_image.jpg" alt="Graduate student meeting with an advisor"/></div> <div class="inquiry-copy flex column"><h2 class="red">Let's Get You Started</h2> <p>Tell us a little about yourself and our graduate team will reach out soon.</p> <form class="lead-form" data-success-message="Thank you! Information is on the way. Watch your email for information about the MCST program and how WSSU graduate study prepares you to become a leader in your field."><label><span>Name <b>*</b></span> <input name="name" autocomplete="name" required=""/></label> <label><span>Email <b>*</b></span> <input name="email" type="email" autocomplete="email" required=""/></label> <label><span>Program of Interest <b>*</b></span> <select name="program" required="">`);
+	$$renderer.option({}, ($$renderer) => {
+		$$renderer.push(`Undecided`);
+	});
+	$$renderer.option({}, ($$renderer) => {
+		$$renderer.push(`Master of Science in Computer Science and Technology`);
+	});
+	$$renderer.option({}, ($$renderer) => {
+		$$renderer.push(`Masters Degrees`);
+	});
+	$$renderer.option({}, ($$renderer) => {
+		$$renderer.push(`Certificates`);
+	});
+	$$renderer.option({}, ($$renderer) => {
+		$$renderer.push(`Doctoral Degrees`);
+	});
+	$$renderer.push(`</select></label> <button class="outline-button" type="submit">Submit</button> <p class="form-status" role="status" aria-live="polite"></p></form></div></section> <section class="flex innovators-section"><div class="innovators-copy flex column"><h2 class="white red-shadow">Innovators. <br/> Problem-Solvers. <br/>Visionaries.</h2> <ul><li>Evening classes</li> <li>Faculty mentorship</li> <li>Real-world projects</li> <li>State-of-the-art labs</li></ul></div> <div class="photo-card red"><img src="/images/program-community.jpg" alt="Students collaborating in a lab"/></div></section> <section class="flex career-paths"><div class="section-inner"><h2 class="gold">One Degree. Multiple Career Paths.</h2> <ul><li>Cybersecurity Manager</li> <li>Data Scientist</li> <li>Senior Software Developer</li> <li>Network Architect</li> <li>Researcher or Educator</li></ul></div></section> <section class="flex stats-band"><div class="stats-grid"><div class="stat-stack"><div class="stats flicker">98%</div> <p>job or doctoral placement rate</p></div> <div class="stat-stack"><div class="stats flicker">22%</div> <p>projected growth in computing careers</p></div> <div class="stat-stack"><div class="stats flicker">67%</div> <p>of graduate students receive paid research assistantships</p></div></div></section> <section class="flex column lead-room-section"><h2 class="white">Lead Every Room</h2> <p>Gain the skills, confidence, and real-world opportunities to advance your career through courses in cryptography, database management, hardware security, data science, and artifical intelligence.</p> <div class="image-contain"><img src="/images/program-lead.jpg" alt="Graduate student working at a laptop"/></div></section> <section class="flex column affordability-section" id="financial-aid"><h2 class="red">Affordability without Compromise</h2> <p>Our graduate programs are among the most affordable in the Piedmont Triad region. From competitive tuition and financial aid to paid research assistantships funded through faculty grants, we offer options that put your graduate degree within reach.</p></section> <section class="flex column serve-section"><h2 class="red">Depart to Serve</h2> <h3>The Experts &amp; Support Every Community Deserves.</h3> <p>Join WSSU's "Ramily" network of 24,000 alumni and build lasting professional connection through corporate partnerships and the Association for Computing Machinery.</p> <a class="outline-button gold line" href="#contact">Let's Find a Path That Fits You</a></section></main>`);
+}
+//#endregion
+export { _page as default };
