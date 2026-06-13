@@ -1,6 +1,10 @@
 <script>
 	import { handleLeadSubmit } from '$lib/scripts/lead-form.js';
 	import ProgramHero from '$lib/components/ProgramHero.svelte';
+	import InnovatorsCareerPaths from '$lib/components/InnovatorsCareerPaths.svelte';
+    import Stats from '$lib/components/Stats.svelte';
+    import LeadRoom from '$lib/components/LeadRoom.svelte';
+    import HeadingAndText from '$lib/components/headingAndText.svelte';
 </script>
 
 <svelte:head>
@@ -12,14 +16,14 @@
 </svelte:head>
 
 <main>
-	<ProgramHero></ProgramHero>
-	<section class="flex column program-intro">
-		<h2>5-Year (4+1) BS to MS MCST</h2>
-		<p>
-			The 4+1 program lets qualified WSSU Computer Science majors complete both degrees in five years - saving time
-			and tuition.
-		</p>
-	</section>
+	<ProgramHero
+		major="Computer Science" 
+		degreeType="MS"
+		programCode="MCST"
+		image="/images/program-hero.jpg"
+	></ProgramHero>
+
+	<HeadingAndText></HeadingAndText>
 
 	<section class="flex inquiry-section" id="contact">
 		<div class="campus-collage" aria-hidden="true">
@@ -65,67 +69,26 @@
 		</div>
 	</section>
 
-	<section class="flex innovators-section">
-		<div class="innovators-copy flex column">
-			<h2 class="white red-shadow">
-				Innovators.
-				<br />
-				Problem-Solvers.
-				<br />Visionaries.
-			</h2>
-			<ul>
-				<li>Evening classes</li>
-				<li>Faculty mentorship</li>
-				<li>Real-world projects</li>
-				<li>State-of-the-art labs</li>
-			</ul>
-		</div>
+	<InnovatorsCareerPaths></InnovatorsCareerPaths>
+	<Stats 
+		stats={[
+			{
+				value: '99%',
+				description: 'job or doctoral placement rate'
+			},
+			{
+				value: '22%',
+				description: 'projected growth in computing careers'
+			},
+			{
+				value: '67%',
+				description: 'of graduate students receive paid research assistantships'
+			}
+		]}
+	></Stats>
+	
 
-		<div class="photo-card red">
-			<img src="/images/program-community.jpg" alt="Students collaborating in a lab" />
-		</div>
-	</section>
-
-	<section class="flex career-paths">
-		<div class="section-inner">
-			<h2 class="gold">One Degree. Multiple Career Paths.</h2>
-			<ul>
-				<li>Cybersecurity Manager</li>
-				<li>Data Scientist</li>
-				<li>Senior Software Developer</li>
-				<li>Network Architect</li>
-				<li>Researcher or Educator</li>
-			</ul>
-		</div>
-	</section>
-
-	<section class="flex stats-band">
-		<div class="stats-grid">
-			<div class="stat-stack">
-				<div class="stats flicker">98%</div>
-				<p>job or doctoral placement rate</p>
-			</div>
-			<div class="stat-stack">
-				<div class="stats flicker">22%</div>
-				<p>projected growth in computing careers</p>
-			</div>
-			<div class="stat-stack">
-				<div class="stats flicker">67%</div>
-				<p>of graduate students receive paid research assistantships</p>
-			</div>
-		</div>
-	</section>
-
-	<section class="flex column lead-room-section">
-		<h2 class="white">Lead Every Room</h2>
-		<p>
-			Gain the skills, confidence, and real-world opportunities to advance your career through courses in cryptography, database management, hardware security, data science, and artifical intelligence.
-		</p>
-
-		<div class="image-contain">
-			<img src="/images/program-lead.jpg" alt="Graduate student working at a laptop" />
-		</div>
-	</section>
+	<LeadRoom></LeadRoom>
 
 	<section class="flex column affordability-section" id="financial-aid">
 		<h2 class="red">Affordability without Compromise</h2>

@@ -1,10 +1,18 @@
+<script>
+    let {major, programCode, degreeType, image} = $props();
+</script>
+
 <section class="flex program-hero">
-    <div class="program-hero-image" aria-hidden="true"></div>
+    <div class="program-hero-image" aria-hidden="true" style:--hero-image={`url("${image}")`}></div>
 
     <div class="program-hero-content">
-        <p class="program-code">MCST</p>
-        <h1 class="gold">Master<br />of Science</h1>
-        <h3>in Computer Science and Technology</h3>
+        <p class="program-code">{ programCode }</p>
+        {#if degreeType == 'MS'}
+            <h1 class="gold">Master<br />of Science</h1>
+        {:else if degreeType = 'BS'}
+            <h1 class="gold">Master<br />of Business</h1>
+        {/if}
+        <h3>in { major }</h3>
     </div>
 </section>
 
@@ -25,7 +33,7 @@
 
     .program-hero-image {
         flex: 1 1 50%;
-        background: url("images/program-hero.jpg") right / cover no-repeat;
+        background: var(--hero-image) right / cover no-repeat;
     }
 
     .program-hero-content {
@@ -73,6 +81,6 @@
   .program-hero-content > p:last-child {
     font-size: 15px;
   }
-  
+
 }
 </style>
