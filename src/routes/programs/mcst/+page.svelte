@@ -2,28 +2,33 @@
 	import { handleLeadSubmit } from '$lib/scripts/lead-form.js';
 	import ProgramHero from '$lib/components/ProgramHero.svelte';
 	import InnovatorsCareerPaths from '$lib/components/InnovatorsCareerPaths.svelte';
-    import Stats from '$lib/components/Stats.svelte';
+    import Stats from '$lib/components/StatRow.svelte';
     import LeadRoom from '$lib/components/LeadRoom.svelte';
     import HeadingAndText from '$lib/components/headingAndText.svelte';
+    import FinancialAid from '$lib/components/FinancialAid.svelte';
+    import FindAPath from '$lib/components/FindAPath.svelte';
 </script>
 
 <svelte:head>
 	<title>Master of Science in Computer Science and Technology | WSSU</title>
 	<meta
-		name="description"
-		content="Explore the Master of Science in Computer Science and Technology program at Winston-Salem State University."
+		name = "description"
+		content = "Explore the Master of Science in Computer Science and Technology program at Winston-Salem State University."
 	/>
 </svelte:head>
 
 <main>
 	<ProgramHero
-		major="Computer Science" 
-		degreeType="MS"
-		programCode="MCST"
-		image="/images/program-hero.jpg"
+		major = "Computer Science" 
+		degreeType = "MS"
+		programCode = "MCST"
+		image = "/images/program-hero.jpg"
 	></ProgramHero>
 
-	<HeadingAndText></HeadingAndText>
+	<HeadingAndText 
+		heading = "5-Year (4+1) BS to MS MCST"
+		paragraph = "The 4+1 program lets qualified WSSU Computer Science majors complete both degrees in five years - saving time and tuition."
+	></HeadingAndText>
 
 	<section class="flex inquiry-section" id="contact">
 		<div class="campus-collage" aria-hidden="true">
@@ -71,7 +76,7 @@
 
 	<InnovatorsCareerPaths></InnovatorsCareerPaths>
 	<Stats 
-		stats={[
+		stats = {[
 			{
 				value: '99%',
 				description: 'job or doctoral placement rate'
@@ -87,21 +92,18 @@
 		]}
 	></Stats>
 	
-
 	<LeadRoom></LeadRoom>
 
-	<section class="flex column affordability-section" id="financial-aid">
-		<h2 class="red">Affordability without Compromise</h2>
-		<p>Our graduate programs are among the most affordable in the Piedmont Triad region. From competitive tuition and financial aid to paid research assistantships funded through faculty grants, we offer options that put your graduate degree within reach.</p>
-	</section>
+	<FinancialAid
+		heading = "Affordability without Compromise"
+		paragraph = "Our graduate programs are among the most affordable in the Piedmont Triad region. From competitive tuition and financial aid to paid research assistantships funded through faculty grants, we offer options that put your graduate degree within reach."
+	></FinancialAid>
 
-	<section class="flex column serve-section">
-		<h2 class="red">Depart to Serve</h2>
-		<h3>The Experts &amp; Support Every Community Deserves.</h3>
-		<p>
-			Join WSSU's "Ramily" network of 24,000 alumni and build lasting professional connection through corporate partnerships and the Association for Computing Machinery.
-		</p>
+	<FindAPath
+		heading = "Depart to Serve"
+		subHeading = "The Experts &amp; Support Every Community Deserves."
+		description = 'Join WSSUs "Ramily" network of 24,000 alumni and build lasting professional connection through corporate partnerships and the Association for Computing Machinery.'
+		buttonLabel = "Let's Find a Path That Fits You"
+	></FindAPath>
 
-		<a class="outline-button gold line" href="#contact">Let's Find a Path That Fits You</a>
-	</section>
 </main>

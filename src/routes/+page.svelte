@@ -45,7 +45,7 @@
 		</div>
 	</section>
 
-	<section class="flex inquiry-section landing" id="contact">
+	<section class="flex form-section landing" id="contact">
 		<div class="campus-collage" aria-hidden="true">
 			<img class="left" src="/images/landing-campus-left.jpg" alt="" />
 			<!-- <img class="right" src="/images/landing-campus-right.jpg" alt="" /> -->

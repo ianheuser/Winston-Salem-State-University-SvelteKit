@@ -1,9 +1,10 @@
+<script>
+    let { heading, paragraph } = $props();
+</script>
+
 <section class="flex column headingAndText ">
-    <h2>5-Year (4+1) BS to MS MCST</h2>
-    <p>
-        The 4+1 program lets qualified WSSU Computer Science majors complete both degrees in five years - saving time
-        and tuition.
-    </p>
+    <h2>{heading}</h2>
+    <p>{paragraph}</p>
 </section>
 
 <style>

@@ -181,10 +181,6 @@ select {
   flex-direction: column;
 }
 
-.serve-section .section-inner {
-   width: clamp(300px, 50vw, 600px);
-  
-}
 
 :where(section) {
   position: relative;
@@ -403,22 +399,6 @@ select {
   border-bottom: var(--red) 2px solid;
   border-top: solid var(--gold) 4px;
 }
-
-.career-paths .section-inner,
-.lead-room-section .section-inner,
-.affordability-section .section-inner,
-.serve-section .section-inner {
-  flex-direction: column;
-  align-items: center;
-}
-
-  .serve-section .outline-button {
-    width: clamp(400px, 30%, 400px);
-    /* min-height: 50px; */
-    /* font-size: 18px; */
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
 
 .program-type-grid {
     display: flex;
@@ -673,14 +653,8 @@ p.white {
   margin: 0;
 }
 
-
-
 .inquiry-copy > p {
   width: 100%;
-}
-
-.lead-room-section p {
-  margin-bottom: 50px;
 }
 
 .dean-quote {
@@ -881,40 +855,6 @@ p.white {
   text-transform: uppercase;
 }
 
-.lead-room-section {
-  overflow: hidden;
-  padding: 50px 0 0;
-  background: linear-gradient(180deg, var(--gold) 0%, var(--gold) 54%, rgba(215, 168, 14, 0.36) 74%, rgba(215, 168, 14, 0) 100%);
-  text-align: center;
-}
-
-.lead-room-section img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  aspect-ratio: 534/261;
-}
-
-.image-contain {
-  position: relative;
-  width: 100%;
-}
-
-.lead-room-section .image-contain::before {
-  content: "";
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  height: 100px;
-  background: linear-gradient(0deg, rgba(213, 35, 52, 0) 0%, rgba(211, 30, 50, 0.25) 34%, var(--gold) 100%);
-  pointer-events: none;
-}
-
-.affordability-section {
-  background: var(--black);
-  color: var(--white);
-}
 
 .button-line {
   border-bottom: 3px solid var(--gold);
@@ -1370,31 +1310,7 @@ p.white {
     font-size: 30px;
   }
 
-  .lead-room-section {
-    padding-top: 24px;
-  }
-
-  .lead-room-section p {
-    margin-bottom: 25px;
-  }
-
-  .affordability-section {
-    padding: 25px 0 30px;
-  }
-
 }
 
 
-@media (max-width: 550px) {
 
-  .serve-section .section-inner {
-    width: 80%;
-  }
-
-  .serve-section .outline-button {
-    width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-}

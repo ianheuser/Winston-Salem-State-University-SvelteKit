@@ -2,9 +2,22 @@
 
 
 <script>
-    // expects 
-    // stats = [{value:0,description:'awesome'}]
-    let { stats = [] } = $props();
+    // Default values
+    let { stats = 
+        [
+			{
+				value: '99%',
+				description: 'job or doctoral placement rate'
+			},
+			{
+				value: '22%',
+				description: 'projected growth in computing careers'
+			},
+			{
+				value: '67%',
+				description: 'of graduate students receive paid research assistantships'
+			}
+		] } = $props();
 </script>
 
 <section class="flex stats-band">
