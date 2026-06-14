@@ -1,9 +1,9 @@
 <script>
-	import { asset } from '$app/paths';
+	import { asset, resolve } from '$app/paths';
 </script>
 
 <footer class="site-footer">
-	<a class="footer-brand" href="/">
+	<a class="footer-brand" href={ resolve("/") }>
 		<img src={ asset("/images/centered-logo.png") } alt="Winston-Salem State University" />
 	</a>
 	<address>
