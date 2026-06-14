@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { initRamPathAnimation } from '$lib/scripts/animate-on-path.js';
 	import { handleLeadSubmit } from '$lib/scripts/lead-form.js';
+	import { asset, resolve } from '$app/paths';
 
 	onMount(() => initRamPathAnimation());
 </script>
@@ -25,19 +26,19 @@
 
 		<div class="program-type-grid" aria-label="Program types">
 			<div class="program-type">
-				<a class="neon-button gold" href="/programs/mcst">
+				<a class="neon-button gold" href={ resolve("/programs/mcst") }>
 					Masters Degrees
 				</a>
 				<p class="white">Build specialized skills that fit your goals</p>
 			</div>
 			<div class="program-type">
-				<a class="neon-button blue" href="/programs/mcst">
+				<a class="neon-button blue" href={ resolve("/programs/mcst") }>
 					Certificates
 				</a>
 				<p class="white">Advance your expertise to lead in your field</p>
 			</div>
 			<div class="program-type">
-				<a class="neon-button green" href="/programs/mcst">
+				<a class="neon-button green" href={ resolve("/programs/mcst") }>
 					Doctoral Degrees
 				</a>
 				<p class="white">Earn the highest credential in your profession</p>
@@ -47,13 +48,13 @@
 
 	<section class="flex form-section landing" id="contact">
 		<div class="campus-collage" aria-hidden="true">
-			<img class="left" src="/images/landing-campus-left.jpg" alt="" />
-			<!-- <img class="right" src="/images/landing-campus-right.jpg" alt="" /> -->
+			<img class="left" src={ asset("/images/landing-campus-left.jpg") } alt="" />
+			<!-- <img class="right" src={ asset("/images/landing-campus-right.jpg") } alt="" /> -->
 		</div>
 
 		<div class="photo-card red">
 			<div class="red-line"></div>
-			<img src="/images/landing-form-photo.jpg" alt="Graduate student meeting with an advisor" />
+			<img src={ asset("/images/landing-form-photo.jpg") } alt="Graduate student meeting with an advisor" />
 		</div>
 
 		<div class="inquiry-copy flex column">
@@ -149,19 +150,19 @@
 			<image
 				id="js-path-ram"
 				class="path-proof-ram"
-				href="/images/ram-head.png"
+				href={asset("/images/ram-head.png")}
 				x="-120"
 				y="-109"
 				width="240"
 				height="218"
 			/>
 		</svg>
-		<img class="red-blur right" src="/images/red-blur.png" alt="" />
-		<img class="red-blur left" src="/images/red-blur.png" alt="" />
+		<img class="red-blur right" src={ asset("/images/red-blur.png") } alt="" />
+		<img class="red-blur left" src={ asset("/images/red-blur.png") } alt="" />
 	</section>
 
 	<section class="flex dean-quote">
-		<img src="/images/dean-boykin.jpg" alt="Montrale Boykin, Dean, Graduate College" />
+		<img src={ asset("/images/dean-boykin.jpg") } alt="Montrale Boykin, Dean, Graduate College" />
 		<blockquote>
 			<p>
 				At WSSU, you'll be prepared and ready to lead in any room you enter. If you're looking for real economic

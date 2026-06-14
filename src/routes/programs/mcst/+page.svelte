@@ -7,6 +7,7 @@
     import HeadingAndText from '$lib/components/headingAndText.svelte';
     import FinancialAid from '$lib/components/FinancialAid.svelte';
     import FindAPath from '$lib/components/FindAPath.svelte';
+	import { asset } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -22,7 +23,7 @@
 		major = "Computer Science" 
 		degreeType = "MS"
 		programCode = "MCST"
-		image = "/images/program-hero.jpg"
+		image = { asset('/images/program-hero.jpg') }
 	></ProgramHero>
 
 	<HeadingAndText 
@@ -32,13 +33,12 @@
 
 	<section class="flex inquiry-section" id="contact">
 		<div class="campus-collage" aria-hidden="true">
-			<img class="left" src="/images/landing-campus-left.jpg" alt="" />
-			<!-- <img class="right" src="/images/landing-campus-right.jpg" alt="" /> -->
+			<img class="left" src={ asset("/images/landing-campus-left.jpg") } alt="" />
 		</div>
 
 		<div class="photo-card red">
 			<div class="red-line"></div>
-			<img src="/images/MCST_lead_form_image.jpg" alt="Graduate student meeting with an advisor" />
+			<img src={ asset("/images/MCST_lead_form_image.jpg") } alt="Graduate student meeting with an advisor" />
 		</div>
 
 		<div class="inquiry-copy flex column">

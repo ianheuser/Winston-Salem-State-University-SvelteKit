@@ -1,3 +1,7 @@
+<script>
+	import {asset} from '$app/paths'
+</script>
+
 <section class="flex column lead-room-section">
     <h2 class="white">Lead Every Room</h2>
     <p>
@@ -5,7 +9,7 @@
     </p>
 
     <div class="image-contain">
-        <img src="/images/program-lead.jpg" alt="Graduate student working at a laptop" />
+        <img src={ asset("/images/program-lead.jpg") } alt="Graduate student working at a laptop" />
     </div>
 </section>
 

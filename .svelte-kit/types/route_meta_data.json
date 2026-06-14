@@ -1,4 +1,9 @@
 {
-	"/": [],
-	"/programs/mcst": []
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/programs/mcst": [
+		"src/routes/+layout.js"
+	]
 }

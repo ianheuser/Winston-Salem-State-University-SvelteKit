@@ -1,3 +1,7 @@
+<script>
+	import {asset} from '$app/paths'
+</script>
+
 <section class="flex innovators-section">
     <div class="innovators-copy flex column">
         <h2 class="white red-shadow">
@@ -15,7 +19,7 @@
     </div>
 
     <div class="photo-card red">
-        <img src="/images/program-community.jpg" alt="Students collaborating in a lab" />
+        <img src={ asset("/images/program-community.jpg") } alt="Students collaborating in a lab" />
     </div>
     </section>
 

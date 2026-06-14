@@ -1,5 +1,5 @@
-<script>
-    let {major, programCode, degreeType, image} = $props();
+<script> 
+let {major, programCode, degreeType, image} = $props();
 </script>
 
 <section class="flex program-hero">

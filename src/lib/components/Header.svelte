@@ -1,4 +1,5 @@
 <script>
+	import {resolve,asset} from '$app/paths'
 	import { onMount } from 'svelte';
 
 	let menuButton;
@@ -146,11 +147,11 @@
 
 <header class="site-header">
 	<a class="brand" href="/" aria-label="Winston-Salem State University Graduate College home">
-		<img src="/images/new-logo.png" class="main-logo" alt="Winston-Salem State University Graduate College" />
+		<img src={ asset("/images/new-logo.png") } class="main-logo" alt="Winston-Salem State University Graduate College" />
 	</a>
 
 	<nav class="desktop-nav" aria-label="Primary navigation">
-		<a href="/programs/mcst">Programs</a>
+		<a href={ resolve("/programs/mcst") }>Programs</a>
 		<a href="#financial-aid">Financial Aid</a>
 		<a class="nav-contact" href="#contact">Contact</a>
 	</nav>
@@ -163,7 +164,7 @@
 </header>
 
 <nav bind:this={mobileNav} class="mobile-nav" aria-label="Mobile navigation" hidden>
-	<a href="/programs/mcst">Programs</a>
+	<a href={ resolve("/programs/mcst") }>Programs</a>
 	<a href="#financial-aid">Financial Aid</a>
 	<a href="#contact">Contact</a>
 </nav>
