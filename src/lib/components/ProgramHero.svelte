@@ -60,7 +60,38 @@ let {major, programCode, degreeType, image} = $props();
         background: var(--gold);
     }
 
+
+    .program-code {
+        width: 125px;
+        /* max-width: 125px; */
+        height: 125px;
+        /* max-height: 140px; */
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.86);
+        color: var(--gold);
+        font-family: "Tilt Neon", sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        DISPLAY: INLINE-FLEX;
+        JUSTIFY-CONTENT: CENTER;
+        ALIGN-ITEMS: end;
+        padding-bottom: 18px;
+        position: absolute;
+        top: -70px;
+        left: -60px;
+    }
+
 @media (max-width: 720px){
+
+    .program-code {
+        width: 90px;
+        height: 90px;
+        padding-bottom: 14px;
+        top: -50px;
+        left: -45px;
+        font-size: 18px;
+    }
 
   .program-hero-image {
     flex-basis: 50%;
