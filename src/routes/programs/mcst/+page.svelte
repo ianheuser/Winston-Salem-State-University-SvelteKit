@@ -3,7 +3,7 @@
 	import ProgramHero from '$lib/components/ProgramHero.svelte';
 	import InnovatorsCareerPaths from '$lib/components/InnovatorsCareerPaths.svelte';
     import StatRow from '$lib/components/StatRow.svelte';
-    import LeadRoom from '$lib/components/LeadRoom.svelte';
+    import RealWorldApplication from '$lib/components/RealWorldApplication.svelte';
     import HeadingAndText from '$lib/components/HeadingAndText.svelte';
     import FinancialAid from '$lib/components/FinancialAid.svelte';
     import FindAPath from '$lib/components/FindAPath.svelte';
@@ -20,10 +20,10 @@
 
 <main>
 	<ProgramHero
-		major = "Computer Science" 
-		degreeType = "MS"
+		heading = "Master of Science"
+		subHeading = "in Computer Science Information and Technology" 
 		programCode = "MCST"
-		image = { asset('/images/program-hero.jpg') }
+		image = { asset('/images/mcst-hero.jpg') }
 	></ProgramHero>
 
 	<HeadingAndText 
@@ -38,7 +38,7 @@
 
 		<div class="photo-card red">
 			<div class="red-line"></div>
-			<img src={ asset("/images/MCST_lead_form_image.jpg") } alt="Graduate student meeting with an advisor" />
+			<img src={ asset("/images/mcst-lead-form.jpg") } alt="Graduate student meeting with an advisor" />
 		</div>
 
 		<div class="inquiry-copy flex column">
@@ -92,7 +92,11 @@
 		]}
 	></StatRow>
 	
-	<LeadRoom></LeadRoom>
+	<RealWorldApplication
+		heading = "Lead Every Room"
+		paragraph = "Gain the skills, confidence, and real-world opportunities to advance your career through courses in cryptography, database management, hardware security, data science, and artifical intelligence."
+		image = { asset('/images/mcst-real-world-application.jpg') }
+	></RealWorldApplication>
 
 	<FinancialAid
 		heading = "Affordability without Compromise"

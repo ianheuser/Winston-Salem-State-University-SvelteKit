@@ -3,7 +3,7 @@
 	import ProgramHero from '$lib/components/ProgramHero.svelte';
 	import InnovatorsCareerPaths from '$lib/components/InnovatorsCareerPaths.svelte';
     import StatRow from '$lib/components/StatRow.svelte';
-    import LeadRoom from '$lib/components/LeadRoom.svelte';
+    import RealWorldApplication from '$lib/components/RealWorldApplication.svelte';
     import HeadingAndText from '$lib/components/HeadingAndText.svelte';
     import FinancialAid from '$lib/components/FinancialAid.svelte';
     import FindAPath from '$lib/components/FindAPath.svelte';
@@ -19,16 +19,17 @@
 </svelte:head>
 
 <main>
+
 	<ProgramHero
-		major = "Computer Science" 
-		degreeType = "MS"
-		programCode = "MCST"
-		image = { asset('/images/program-hero.jpg') }
+		heading = "Certificate" 
+		subHeading = "in Data Analytics"
+		programCode = "DA"
+		image = { asset('/images/data-analytics-hero.jpg') }
 	></ProgramHero>
 
 	<HeadingAndText 
-		heading = "5-Year (4+1) BS to MS MCST"
-		paragraph = "The 4+1 program lets qualified WSSU Computer Science majors complete both degrees in five years - saving time and tuition."
+		heading = "Data Analytics (Post-Bacc Certificate)"
+		paragraph = "Boost your BS or BA degree with a Certificate in Data Analytics in just 12 semester hours. The program is designed for professionals in healthcare, computer science, business, education, or those working in any other field who want to advance their data analytical abilities."
 	></HeadingAndText>
 
 	<section class="flex inquiry-section" id="contact">
@@ -38,7 +39,7 @@
 
 		<div class="photo-card red">
 			<div class="red-line"></div>
-			<img src={ asset("/images/MCST_lead_form_image.jpg") } alt="Graduate student meeting with an advisor" />
+			<img src={ asset("/images/data-analytics-lead-form.jpg") } alt="Graduate student meeting with an advisor" />
 		</div>
 
 		<div class="inquiry-copy flex column">
@@ -47,7 +48,7 @@
 
 			<form
 				class="lead-form"
-				data-success-message="Thank you! Information is on the way. Watch your email for information about the MCST program and how WSSU graduate study prepares you to become a leader in your field."
+				data-success-message="Thank you! Information is on the way. Watch your email for information about the Certificate in Data Analytics program and how WSSU graduate study prepares you to become a leader in your field."
 				onsubmit={handleLeadSubmit}
 			>
 				<label>
@@ -78,21 +79,17 @@
 	<StatRow
 		stats = {[
 			{
-				value: '99%',
-				description: 'job or doctoral placement rate'
-			},
-			{
-				value: '22%',
-				description: 'projected growth in computing careers'
-			},
-			{
-				value: '67%',
-				description: 'of graduate students receive paid research assistantships'
+				value: '21%',
+				description: 'job growth from 2024 to 2034'
 			}
 		]}
 	></StatRow>
 	
-	<LeadRoom></LeadRoom>
+	<RealWorldApplication
+		heading = "Lead Every Room"
+		paragraph = "Gain the skills, confidence, and real-world opportunities to advance your career through courses in foundational analytics, data mining, big data analytics, and data visualization."
+		image = { asset('/images/data-analytics-real-world-application.jpg') }
+	></RealWorldApplication>
 
 	<FinancialAid
 		heading = "Affordability without Compromise"

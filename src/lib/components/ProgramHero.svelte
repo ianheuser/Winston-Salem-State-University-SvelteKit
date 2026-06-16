@@ -1,5 +1,5 @@
 <script> 
-let {major, programCode, degreeType, image} = $props();
+let { heading, programCode, subHeading = null , image } = $props();
 </script>
 
 <section class="flex program-hero">
@@ -7,12 +7,8 @@ let {major, programCode, degreeType, image} = $props();
 
     <div class="program-hero-content">
         <p class="program-code">{ programCode }</p>
-        {#if degreeType == 'MS'}
-            <h1 class="gold">Master<br />of Science</h1>
-        {:else if degreeType = 'BS'}
-            <h1 class="gold">Master<br />of Business</h1>
-        {/if}
-        <h3>in { major }</h3>
+        {#if heading}<h1 class="gold">{heading}</h1>{/if}
+        {#if subHeading}<h3>{ subHeading }</h3>{/if}
     </div>
 </section>
 
