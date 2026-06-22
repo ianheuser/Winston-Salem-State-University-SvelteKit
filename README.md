@@ -1,26 +1,13 @@
-# sv
-
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+# Project Setup
+After cloning, install all depdendencies.
 
 ```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv@0.16.1 create --template minimal --types jsdoc --install npm scaffold-tmp
+npm install
 ```
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+This project is built with Svelte and Sveltekit. The global css and the image assets are found in the "static" folder. Beyond that, the project resides in the "src" folder.
 
 ```sh
 npm run dev
