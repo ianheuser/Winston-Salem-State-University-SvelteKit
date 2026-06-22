@@ -1,4 +1,5 @@
 <script>
+    let { innovationBullets , careerPaths} = $props();
 	import {asset} from '$app/paths'
 </script>
 
@@ -11,15 +12,14 @@
             <br />Visionaries.
         </h2>
         <ul>
-            <li>Evening classes</li>
-            <li>Faculty mentorship</li>
-            <li>Real-world projects</li>
-            <li>State-of-the-art labs</li>
+            {#each innovationBullets as bullet}
+                <li>{ bullet }</li>
+            {/each}
         </ul>
     </div>
 
     <div class="photo-card red">
-        <img src={ asset("/images/program-community.jpg") } alt="Students collaborating in a lab" />
+        <img src={ asset("/images/innovators.jpg") } alt="Students collaborating in a lab" />
     </div>
     </section>
 
@@ -27,11 +27,9 @@
     <div class="section-inner">
         <h2 class="gold">One Degree. Multiple Career Paths.</h2>
         <ul>
-            <li>Cybersecurity Manager</li>
-            <li>Data Scientist</li>
-            <li>Senior Software Developer</li>
-            <li>Network Architect</li>
-            <li>Researcher or Educator</li>
+            {#each careerPaths as path}
+                <li>{ path }</li>
+            {/each}
         </ul>
     </div>
 </section>

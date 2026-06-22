@@ -4,14 +4,15 @@ export function handleLeadSubmit(event) {
 
 	const form = event.currentTarget;
 
-	// Each form can provide its own success message through a data attribute.
-	const status = form.querySelector('.form-status');
-	const message = form.dataset.successMessage || 'Thanks. We will be in touch soon.';
-
-	if (status) {
-		status.textContent = message;
-	}
-
 	// Clear the fields after a successful mock submission.
 	form.reset();
+
+	// Show the success message.
+	const messageContainer = document.querySelector('.form-message');
+	const formContent = document.querySelector('.form-content');
+	if (messageContainer && formContent) {
+		formContent.style.display = 'none';
+		messageContainer.style.display = 'block';
+	}
+	
 }

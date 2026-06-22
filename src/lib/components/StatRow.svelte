@@ -55,7 +55,7 @@
 }
 
 .stats-grid > div {
-  flex: 1 1 260px;
+  flex: 0 1 260px;
 }
 
 .stats {
@@ -88,9 +88,9 @@
     width: min(100% - 28px, 590px);
   }
 
-  .stats-grid > div {
-    flex-basis: 0;
-  }
+.stats-grid > div {
+  flex: 1 1 260px;
+}
 
   .stats {
     font-size: 30px;

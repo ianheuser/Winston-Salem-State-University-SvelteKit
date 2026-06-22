@@ -27,7 +27,7 @@ export function initNeonEffects() {
 
 	// The scroll fallback catches fast scrolls that pass over short neon elements between observer checks.
 	const revealNeonTargetsInRange = (rangeTop, rangeBottom) => {
-		const viewportBuffer = 12;
+		const viewportBuffer = -(window.innerHeight * 0.2);
 
 		neonTargets.forEach((target) => {
 			if (target.classList.contains('neon-lit')) {
@@ -91,19 +91,19 @@ export function initNeonEffects() {
 
 	if ('IntersectionObserver' in window) {
 		neonObserver = new IntersectionObserver(
-			(entries, observer) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						lightNeonTarget(entry.target);
-						observer.unobserve(entry.target);
-					}
-				});
-			},
-			{
-				rootMargin: '0px',
-				threshold: 0
+	(entries, observer) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				lightNeonTarget(entry.target);
+				observer.unobserve(entry.target);
 			}
-		);
+		});
+	},
+	{
+		rootMargin: '0px 0px -20% 0px',
+		threshold: 0
+	}
+);
 
 		neonTargets.forEach((target) => neonObserver.observe(target));
 	} else {

@@ -63,7 +63,7 @@ let { heading, programCode, subHeading = null , image } = $props();
         height: 125px;
         /* max-height: 140px; */
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.86);
+        background: rgba(255, 255, 255, 1);
         color: var(--gold);
         font-family: "Tilt Neon", sans-serif;
         font-size: 25px;

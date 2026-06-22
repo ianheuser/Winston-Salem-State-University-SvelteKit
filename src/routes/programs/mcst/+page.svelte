@@ -4,77 +4,62 @@
 	import InnovatorsCareerPaths from '$lib/components/InnovatorsCareerPaths.svelte';
     import StatRow from '$lib/components/StatRow.svelte';
     import RealWorldApplication from '$lib/components/RealWorldApplication.svelte';
-    import HeadingAndText from '$lib/components/HeadingAndText.svelte';
+    // import HeadingAndText from '$lib/components/HeadingAndText.svelte';
     import FinancialAid from '$lib/components/FinancialAid.svelte';
     import FindAPath from '$lib/components/FindAPath.svelte';
 	import { asset } from '$app/paths';
+	import InquiryForm from '$lib/components/InquiryForm.svelte';
 </script>
 
 <svelte:head>
-	<title>Master of Science in Computer Science and Technology | WSSU</title>
+	<title>Master of Science in Computer Science and Information Technology | WSSU</title>
 	<meta
 		name = "description"
-		content = "Explore the Master of Science in Computer Science and Technology program at Winston-Salem State University."
+		content = "Explore the Master of Science in Computer Science and Information Technology program at Winston-Salem State University."
 	/>
 </svelte:head>
 
 <main>
 	<ProgramHero
-		heading = "Master of Science"
-		subHeading = "in Computer Science Information and Technology" 
+		heading = { "Master \n of Science" }
+		subHeading = "in Computer Science and Information Technology" 
 		programCode = "MCST"
 		image = { asset('/images/mcst-hero.jpg') }
 	></ProgramHero>
+	
+	<!--
+		<HeadingAndText 
+			heading = "5-Year (4+1) BS to MS MCST"
+			paragraph = "The 4+1 program lets qualified WSSU Computer Science majors complete both degrees in five years - saving time and tuition."
+		></HeadingAndText>
+	-->
 
-	<HeadingAndText 
-		heading = "5-Year (4+1) BS to MS MCST"
-		paragraph = "The 4+1 program lets qualified WSSU Computer Science majors complete both degrees in five years - saving time and tuition."
-	></HeadingAndText>
+	<InquiryForm
+		heading = "Let's Get You Started"
+		description = "Tell us a little about yourself and our graduate team will reach out soon."
+		buttonLabel = "Submit"
+		image = { asset('/images/mcst-lead-form.jpg') }
+		imageAlt = "Graduate student meeting with an advisor"
+		thanksMessage = "Watch your inbox for details about the MCST program and see how WSSU graduate study lights your path to become tomorrows expert."
+	></InquiryForm>
+		
+	<InnovatorsCareerPaths
+		innovationBullets = {[
+			"Evening classes",
+			"Faculty mentorship",
+			"Real-world projects",
+			"State-of-the-art labs"
+		]}
 
-	<section class="flex inquiry-section" id="contact">
-		<div class="campus-collage" aria-hidden="true">
-			<img class="left" src={ asset("/images/landing-campus-left.jpg") } alt="" />
-		</div>
+		careerPaths = {[
+			"Cybersecurity Manager",
+			"Data Scientist",
+			"Senior Software Developer",
+			"Network Architect",
+			"Researcher or Educator"
+		]}
+	></InnovatorsCareerPaths>
 
-		<div class="photo-card red">
-			<div class="red-line"></div>
-			<img src={ asset("/images/mcst-lead-form.jpg") } alt="Graduate student meeting with an advisor" />
-		</div>
-
-		<div class="inquiry-copy flex column">
-			<h2 class="red">Let's Get You Started</h2>
-			<p>Tell us a little about yourself and our graduate team will reach out soon.</p>
-
-			<form
-				class="lead-form"
-				data-success-message="Thank you! Information is on the way. Watch your email for information about the MCST program and how WSSU graduate study prepares you to become a leader in your field."
-				onsubmit={handleLeadSubmit}
-			>
-				<label>
-					<span>Name <b>*</b></span>
-					<input name="name" autocomplete="name" required />
-				</label>
-				<label>
-					<span>Email <b>*</b></span>
-					<input name="email" type="email" autocomplete="email" required />
-				</label>
-				<label>
-					<span>Program of Interest <b>*</b></span>
-					<select name="program" required>
-						<option>Undecided</option>
-						<option>Master of Science in Computer Science and Technology</option>
-						<option>Masters Degrees</option>
-						<option>Certificates</option>
-						<option>Doctoral Degrees</option>
-					</select>
-				</label>
-				<button class="outline-button" type="submit">Submit</button>
-				<p class="form-status" role="status" aria-live="polite"></p>
-			</form>
-		</div>
-	</section>
-
-	<InnovatorsCareerPaths></InnovatorsCareerPaths>
 	<StatRow
 		stats = {[
 			{
@@ -95,7 +80,7 @@
 	<RealWorldApplication
 		heading = "Lead Every Room"
 		paragraph = "Gain the skills, confidence, and real-world opportunities to advance your career through courses in cryptography, database management, hardware security, data science, and artifical intelligence."
-		image = { asset('/images/mcst-real-world-application.jpg') }
+		image = { asset('/images/mcst-real-world.jpg') }
 	></RealWorldApplication>
 
 	<FinancialAid
@@ -106,7 +91,7 @@
 	<FindAPath
 		heading = "Depart to Serve"
 		subHeading = "The Experts &amp; Support Every Community Deserves."
-		description = 'Join WSSUs "Ramily" network of 24,000 alumni and build lasting professional connection through corporate partnerships and the Association for Computing Machinery.'
+		description = 'Join WSSUs "Ramily" network of 24,000 alumni and build lasting professional connections through corporate partnerships and the Association for Computing Machinery.'
 		buttonLabel = "Let's Find a Path That Fits You"
 	></FindAPath>
 

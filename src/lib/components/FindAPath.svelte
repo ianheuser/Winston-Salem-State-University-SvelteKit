@@ -4,7 +4,7 @@
 
 <section class="flex column find-a-path">
     <h2 class="red">{heading}</h2>
-    <h3>{subHeading}</h3>
+    <h4>{subHeading}</h4>
     <p>{description}</p>
     <a class="outline-button gold line" href="#contact">
         {buttonLabel}
@@ -15,21 +15,25 @@
 
 
   .find-a-path .outline-button {
-    width: clamp(400px, 30%, 400px);
-    /* min-height: 50px; */
-    /* font-size: 18px; */
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-@media (max-width: 550px) {
-
-  .find-a-path .outline-button {
-    width: 80%;
     margin-top: 20px;
     margin-bottom: 20px;
   }
 
-}
+  .find-a-path p {
+    margin-bottom: 2vw;
+    width: clamp(350px,85%,590px);
+  }
+
+  @media (max-width: 425px) {
+    h4 {
+      width: 75%;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .find-a-path p{
+      width: 90%;
+    }
+  }
 
 </style>
