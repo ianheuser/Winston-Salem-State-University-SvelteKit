@@ -9,7 +9,8 @@
             Innovators.
             <br />
             Problem-Solvers.
-            <br />Visionaries.
+            <br />
+            Visionaries.
         </h2>
         <ul>
             {#each innovationBullets as bullet}
@@ -44,14 +45,6 @@
         background: radial-gradient(circle at 58% 54%, rgba(255, 38, 61, 0.72) 0 12%, rgba(255, 38, 61, 0.24) 22%, rgba(0, 0, 0, 0) 34%), var(--black);
         color: var(--white);
         overflow: visible;
-    }
-
-    .innovators-grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: clamp(60px, 8vw, 110px);
     }
 
     .innovators-copy {

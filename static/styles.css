@@ -80,6 +80,7 @@ p {
     margin: 0px;
     width: 250px;
     padding: 0px;
+    padding-bottom: 0px;
 }
 
 .red-bright {
