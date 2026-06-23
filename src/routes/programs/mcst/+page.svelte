@@ -44,14 +44,15 @@
 	></InquiryForm>
 		
 	<InnovatorsCareerPaths
+		image = { asset("/images/innovators.jpg") }
+		imageAlt = "Students collaborating in a lab"
 		innovationBullets = {[
 			"Evening classes",
 			"Faculty mentorship",
 			"Real-world projects",
 			"State-of-the-art labs"
 		]}
-
-		careerPaths = {[
+		careerPathBullets = {[
 			"Cybersecurity Manager",
 			"Data Scientist",
 			"Senior Software Developer",

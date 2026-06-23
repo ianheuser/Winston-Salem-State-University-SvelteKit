@@ -1,6 +1,7 @@
 <script>
 	import {resolve,asset} from '$app/paths'
 	import { onMount } from 'svelte';
+	import { programs } from '../scripts/progams';
 
 	// @ts-ignore
 	let menuButton;
@@ -8,6 +9,8 @@
 	let mobileNav;
 
 	onMount(() => {
+
+		console.log(programs);
 		// Keep this breakpoint in sync with the CSS rule that hides the burger menu.
 		const mobileBreakpoint = window.matchMedia('(max-width: 980px)');
 		const menuAnimationDuration = 380;

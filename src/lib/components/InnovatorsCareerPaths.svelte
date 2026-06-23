@@ -1,6 +1,5 @@
 <script>
-    let { innovationBullets , careerPaths} = $props();
-	import {asset} from '$app/paths'
+    let { innovationBullets , careerPathBullets, image, imageAlt } = $props();
 </script>
 
 <section class="flex innovators-section">
@@ -20,7 +19,7 @@
     </div>
 
     <div class="photo-card red">
-        <img src={ asset("/images/innovators.jpg") } alt="Students collaborating in a lab" />
+        <img src={ image } alt={ imageAlt } />
     </div>
     </section>
 
@@ -28,8 +27,8 @@
     <div class="section-inner">
         <h2 class="gold">One Degree. Multiple Career Paths.</h2>
         <ul>
-            {#each careerPaths as path}
-                <li>{ path }</li>
+            {#each careerPathBullets as bullet}
+                <li>{ bullet }</li>
             {/each}
         </ul>
     </div>
