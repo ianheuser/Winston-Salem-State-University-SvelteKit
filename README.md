@@ -11,9 +11,9 @@ This project is built with Svelte and Sveltekit. The global css and the image as
 
 In the /lib folder, you will find all of our interactive scripts and then a folder of components. In our case, I've created components for the Header and the footer, as well as the form section and every section on the program template so that changes take place on every program page if a section changes at all.
 
-So if you need to add a new program page, you just add a folder named apptly inside of the programs folder and then add your +page file. So if you added this:  
+So if you need to add a new program page, you just add a folder named apptly inside of the programs folder and then add your +page file. So if you added this:  /programs/my-new-program-page/+page.svelte
 
-/programs/my-new-program-page/+page.svelte
+Most edits to program pages will actually be in the individual components that make it up (found in /src/components), but if the edits are in the data, the edit would be made in the individual program page (/programs/program-name/+page.svelte) where the data is being set for any components on the page.
 
 ## Run development server
 
