@@ -205,7 +205,7 @@
 </header>
 
 <nav bind:this={mobileNav} class="mobile-nav" aria-label="Mobile navigation" hidden>
-	<a class="flickerOnRoll" href={ resolve("/programs/data-analytics") }>Programs</a>
+	<a class="flickerOnRoll" href={ resolve("/programs/mcst") }>Programs</a>
 	<a class="flickerOnRoll" href="#financial-aid">Financial Aid</a>
 	<a class="flickerOnRoll" href="#contact">Contact</a>
 </nav>
