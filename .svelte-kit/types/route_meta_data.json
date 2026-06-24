@@ -3,7 +3,37 @@
 		"src/routes/+layout.js",
 		"src/routes/+layout.js"
 	],
+	"/programs/data-analytics": [
+		"src/routes/+layout.js"
+	],
+	"/programs/dnp": [
+		"src/routes/+layout.js"
+	],
+	"/programs/dpt": [
+		"src/routes/+layout.js"
+	],
+	"/programs/fnp": [
+		"src/routes/+layout.js"
+	],
+	"/programs/mat": [
+		"src/routes/+layout.js"
+	],
+	"/programs/mba": [
+		"src/routes/+layout.js"
+	],
 	"/programs/mcst": [
+		"src/routes/+layout.js"
+	],
+	"/programs/mha": [
+		"src/routes/+layout.js"
+	],
+	"/programs/msn": [
+		"src/routes/+layout.js"
+	],
+	"/programs/msot": [
+		"src/routes/+layout.js"
+	],
+	"/programs/msrc": [
 		"src/routes/+layout.js"
 	]
 }

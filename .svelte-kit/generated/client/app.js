@@ -12,14 +12,34 @@ export const nodes = [
 	() => import('./nodes/0'),
 	() => import('./nodes/1'),
 	() => import('./nodes/2'),
-	() => import('./nodes/3')
+	() => import('./nodes/3'),
+	() => import('./nodes/4'),
+	() => import('./nodes/5'),
+	() => import('./nodes/6'),
+	() => import('./nodes/7'),
+	() => import('./nodes/8'),
+	() => import('./nodes/9'),
+	() => import('./nodes/10'),
+	() => import('./nodes/11'),
+	() => import('./nodes/12'),
+	() => import('./nodes/13')
 ];
 
 export const server_loads = [];
 
 export const dictionary = {
 		"/": [2],
-		"/programs/mcst": [3]
+		"/programs/data-analytics": [3],
+		"/programs/dnp": [4],
+		"/programs/dpt": [5],
+		"/programs/fnp": [6],
+		"/programs/mat": [7],
+		"/programs/mba": [8],
+		"/programs/mcst": [9],
+		"/programs/mha": [10],
+		"/programs/msn": [11],
+		"/programs/msot": [12],
+		"/programs/msrc": [13]
 	};
 
 export const hooks = {

@@ -74,16 +74,27 @@
 
 <style>
 
+
+
+.path-proof-section {
+    padding: 24px;
+    place-items: center;
+    background: var(--black);
+}
+
+/* 
+To hide this animation, set the above class .path-proof-section to display: none;
+and then comment out the :global(.dean-quote) style below. 
+*/
+
+:global(.dean-quote) {
+  margin-top: -100px;
+  z-index: 49;
+}
+
 :global(body.animation-proof-page) {
   min-height: 100svh;
   overflow-x: hidden;
-  background: var(--black);
-}
-
-.path-proof-section {
-  display: none;
-  padding: 24px;
-  place-items: center;
   background: var(--black);
 }
 

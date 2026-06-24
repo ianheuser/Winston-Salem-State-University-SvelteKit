@@ -1,7 +1,7 @@
 <script>
 	import {resolve,asset} from '$app/paths'
 	import { onMount } from 'svelte';
-	import { programs } from '../scripts/progams';
+	import { programs } from '$lib/scripts/programs';
 
 	// @ts-ignore
 	let menuButton;
@@ -9,8 +9,6 @@
 	let mobileNav;
 
 	onMount(() => {
-
-		console.log(programs);
 		// Keep this breakpoint in sync with the CSS rule that hides the burger menu.
 		const mobileBreakpoint = window.matchMedia('(max-width: 980px)');
 		const menuAnimationDuration = 380;
@@ -209,9 +207,15 @@
 
 <nav bind:this={mobileNav} class="mobile-nav" aria-label="Mobile navigation" hidden>
 	<a class="flickerOnRoll" href={ resolve("/programs/mcst") }>Programs</a>
+	<div class="mobile-subnav">
+		{#each programs as program}
+			<a class="subnav-link" href={ resolve(program.href) }>{ program.fullName }</a>
+		{/each}
+	</div>
 	<a class="flickerOnRoll" href="#financial-aid">Financial Aid</a>
-	<a class="flickerOnRoll" href="#contact">Contact</a>
+	<a class="flickerOnRoll top-border" href="#contact">Contact</a>
 </nav>
+
 
 
 <style>
@@ -265,6 +269,27 @@
 .mobile-nav a:hover,
 .mobile-nav a:focus-visible {
   color: var(--red-bright);
+}
+
+.mobile-subnav {
+  	display: flex;
+    flex-direction: column;
+    border-bottom: solid .5px #2d2d2d;
+    border-top: solid .5px #2d2d2d;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}	
+
+.mobile-subnav .subnav-link {
+  text-transform: none;
+  padding: 6px 0px;
+  font-size: 12px;
+  color: var(--white);
+  opacity: 1;
+}
+
+.top-border {
+  border-top: solid .5px #2d2d2d;
 }
 
 .nav-contact {
@@ -370,10 +395,6 @@
 
 :global(.mobile-nav.is-open) a:nth-child(3) {
   transition-delay: 110ms;
-}
-
-.mobile-nav a + a {
-  border-top: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .nav-contact:hover,

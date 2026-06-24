@@ -298,16 +298,6 @@ p.white {
   color: var(--gold);
 }
 
-/*
-  Do the above instead of the below, paired with editing the html button
-
-  .outline-button-gold {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
-
-*/
-
 .form-status {
   min-height: 1.4em;
   margin: 0;
@@ -334,8 +324,6 @@ p.white {
   background: var(--red-bright);
   color: var(--white);
   margin-top: 0px;
-  /* margin-top: -100px; */
-  z-index: 49;
 }
 
 .dean-quote img {
@@ -372,7 +360,7 @@ p.white {
 }
 
 .power-section {
-  display: none;
+  /* display: none; */
   overflow: hidden;
   padding: 100px 24px 50px;
   background-color: var(--black);
@@ -385,7 +373,7 @@ p.white {
 }
 
 .power-section {
-  display: none;
+  /* display: none; */
   overflow: hidden;
   padding: 100px 24px 50px;
   background-color: var(--black);
