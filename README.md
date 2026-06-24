@@ -15,6 +15,19 @@ So if you need to add a new program page, you just add a folder named apptly ins
 
 Most edits to program pages will actually be in the individual components that make it up (found in /src/components), but if the edits are in the data, the edit would be made in the individual program page (/programs/program-name/+page.svelte) where the data is being set for any components on the page.
 
+The submenu in the header (visible on mobile currently) is created off of that program array, so if you do add a program page, add an entry into the program[] in programs.js Below is an example of one of the page entries.
+
+```sh
+{
+		fullName: 'Doctor of Nursing Practice',
+        label: 'DNP',
+        type: 'Doctorate',
+        heading: 'Doctor',
+        subheading: 'of Nursing Practice',
+		href: '/programs/dnp'
+	}
+```
+
 ## Run development server
 
 ```sh
